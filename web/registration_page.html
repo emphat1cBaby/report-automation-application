@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/registration_style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="registration">
+        <h4 style="text-align: center; font-size: 2rem" class="mb-3">Регистрация</h4>
+        <p style="margin-bottom: 3%; font-size: 1.3rem">Для дальнейшего использования приложения укажите папку, в которую будут сохранятся результаты работы приложения</p>
+        <form id="registration_form" action="first_page.html">
+            <div class="text-field" style="margin-bottom: 4%;">
+                <label class="text-field__label" style="font-size: 20px;">Путь к папке</label>
+                <input class="text-field__input" type="text" name="path_to_save" id="path_to_save" required="required" placeholder="Например: C:\Users\User\Desktop\Result">
+              </div>
+            <input type="submit" class="w-100 btn btn-primary btn-lg" style="font-size: 1.5rem!important;" value="Далее">
+        </form>
+       <script src="js/registration_script.js"></script>
+    </div>
+</body>
+</html>

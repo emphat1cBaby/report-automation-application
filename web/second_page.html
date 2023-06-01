@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="first_page.html" class="nav-link">Первый вариант отчета</a></li>
+        <li class="nav-item"><a href="second_page.html" class="nav-link">Второй вариант отчета</a></li>
+        <li class="nav-item"><a href="settings.html" class="nav-link">Настройки</a></li>
+      </ul>
+    </header>
+
+    <div class="content">
+      <div class="row g-5" style="width: 60%; margin: 0 auto">
+      <div class="col-md-7 col-lg-8" style="margin: 0 auto">
+        <form class="needs-validation" id="form" novalidate="" style="margin-bottom: 3%">
+
+          <h4 class="mb-3">Исследование мазка на флору</h4>
+
+          <div class="row g-3" style="margin-bottom: 1%">
+            <div class="col-sm-6" style="margin-bottom: 2%">
+              <label for="study_number" class="form-label">Номер исследования</label>
+              <input type="text" class="form-control" id="study_number" name="study_number" placeholder="" value="" required="required">
+            </div>
+
+            <div class="col-sm-6">
+              <label for="patient" class="form-label">Дата исследования</label>
+              <input type="date" class="form-control" id="research_date" name="research_date" placeholder="" value="today" required="required">
+            </div>
+
+            <div class="col-12"  style="margin-bottom: 2%">
+              <label for="patient" class="form-label">Пациент</label>
+              <input type="text" class="form-control" id="patient" name="patient" placeholder="" value="" required="required">
+            </div>
+
+            <div class="col-sm-6">
+              <label class="form-label">Пол</label>
+              <div class="my-3" style="margin-top: 1%!important;">
+                <div class="form-check">
+                  <input value="Мужской" name="sex" type="radio" class="form-check-input" required="required">
+                  <label class="form-check-label">Мужской</label>
+                </div>
+                <div class="form-check">
+                  <input value="Женский" name="sex" type="radio" class="form-check-input" required="required">
+                  <label class="form-check-label">Женский</label>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-12" style="margin-bottom: 2%">
+            <label for="patient_birthdate" class="form-label">Дата рождения</label>
+            <div class="input-group has-validation">
+              <input type="date" class="form-control" id="patient_birthdate" name="patient_birthdate" required="required">
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%;">
+            <label for="leukocytes" class="form-label">Лейкоциты</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" value="0-5" id="leukocytes" name="leukocytes" placeholder="" required="">
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%;">
+            <label for="epithelium" class="form-label">Эпителий</label>
+            <div class="input-group has-validation">
+              <input type="text" value="5-10" class="form-control" id="epithelium" name="epithelium" placeholder="" required="">
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%;">
+            <label for="gr_stick" class="form-label">Палочки Гр-</label>
+            <div class="input-group has-validation">
+              <input type="text" value="10-100" class="form-control" id="gr_stick" name="gr_stick" placeholder="" required="">
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%;">
+            <label for="cocci_gr" class="form-label">Кокки Гр+</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" id="cocci_gr" name="cocci_gr" value="Нет" placeholder="" required="">
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%;">
+            <label for="coccobacillary_flora" class="form-label">Коккобациллярная флора</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" id="coccobacillary_flora" value="Нет" name="coccobacillary_flora" placeholder="" required="">
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%;">
+            <label for="lactobacillus" class="form-label">Лактобактерии</label>
+            <div class="input-group has-validation">
+              <input type="text" value="10-100" class="form-control" id="lactobacillus" name="lactobacillus" placeholder="" required="">
+            </div>
+          </div>
+
+          <div class="col-12" style="margin-bottom: 2%">
+            <label for="dipococci_gr" class="form-label">Диплококки Гр-</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" id="dipococci_gr" value="Нет" name="dipococci_gr" placeholder="" required="">
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%">
+            <label for="patient" class="form-label">Дрожжеподобные грибы</label>
+            <div class="form-check">
+              <input value="Нет" checked="checked" id="yeast_fungi_not" name="yeast_fungi" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="yeast_fungi_not">Нет</label>
+            </div>
+            <div class="form-check">
+              <input value="Обнаружено" id="yeast_fungi_yes" name="yeast_fungi" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="yeast_fungi_yes">Обнаружено</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%">
+            <label for="patient" class="form-label">Leptothrix</label>
+            <div class="form-check">
+              <input value="Нет" checked="checked" id="leptothrix_not" name="leptothrix" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="leptothrix_not">Нет</label>
+            </div>
+            <div class="form-check">
+              <input value="Обнаружено" id="leptothrix_yes" name="leptothrix" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="leptothrix_yes">Обнаружено</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%">
+            <label for="patient" class="form-label">Мобилункус</label>
+            <div class="form-check">
+              <input value="Нет" checked="checked" id="mobiluncus_not" name="mobiluncus" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="mobiluncus_not">Нет</label>
+            </div>
+            <div class="form-check">
+              <input value="Обнаружено" id="mobiluncus_yes" name="mobiluncus" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="mobiluncus_yes">Обнаружено</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%">
+            <label for="patient" class="form-label">Ключевые клетки</label>
+            <div class="form-check">
+              <input value="Нет" checked="checked" id="key_cells_not" name="key_cells" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="key_cells_not">Нет</label>
+            </div>
+            <div class="form-check">
+              <input value="Обнаружено" id="key_cells_yes" name="key_cells" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="key_cells_yes">Обнаружено</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%">
+            <label for="patient" class="form-label">Слизь</label>
+            <div class="form-check">
+              <input value="Умеренно" checked="checked" id="slime_no" name="slime" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="slime_no">Умеренно</label>
+            </div>
+            <div class="form-check">
+              <input value="Много" id="slime_yes" name="slime" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="slime_yes">Много</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6" style="margin-bottom: 2%">
+            <label for="patient" class="form-label">Трихомонады</label>
+            <div class="form-check">
+              <input value="Обнаружено" id="trichomonads_yes" name="trichomonads" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="trichomonads_yes">Обнаружено</label>
+            </div>
+            <div class="form-check">
+              <input value="Не обнаружено" checked="checked" id="trichomonads_no" name="trichomonads" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="trichomonads_no">Не обнаружено</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label class="form-label">Virgin</label>
+            <div class="my-3" style="margin-top: 1%!important;">
+              <div class="form-check">
+                <input value="true" name="is_virgin" id="is_virgin" onclick="is_virgin_changed()" type="radio" class="form-check-input" required="required">
+                <label class="form-check-label">Да</label>
+              </div>
+              <div class="form-check">
+                <input value="false" name="is_virgin" checked="checked" onclick="is_virgin_changed()" type="radio" class="form-check-input" required="required">
+                <label class="form-check-label">Нет</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="cytological-examination">
+          <h4 class="mb-3">Цитологическое исследование при гинекологическом осмотре</h4>
+
+          <div class="row g-3">
+          <div class="col-sm-6" style="margin-bottom: 2%">
+            <label for="patient" class="form-label">Цитограмма</label>
+            <div class="form-check">
+              <input value="Без онкопатологии" checked="checked" name="cytogram" type="radio" class="form-check-input" required="">
+              <label class="form-check-label">Без онкопатологии</label>
+            </div>
+            <div class="form-check">
+              <input value="Атрофический тип мазка" name="cytogram" type="radio" class="form-check-input" required="">
+              <label class="form-check-label">Атрофический тип мазка</label>
+            </div>
+            <div class="form-check">
+              <input value="Эстрогенный тип мазка" name="cytogram" type="radio" class="form-check-input" required="">
+              <label class="form-check-label">Эстрогенный тип мазка</label>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="row g-3" style="margin-bottom: 3%;">
+          <div class="col-12">
+            <label for="commentary" class="form-label">Комментарий</label>
+            <div class="input-group has-validation">
+              <input type="text" name="commentary" class="form-control" id="commentary" placeholder="">
+            </div>
+          </div>
+        </div>
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Готово</button>
+        </form>
+        <!--    Модальное окно    -->
+        <div id="openModal" class="my-modal">
+          <div class="modal_dialog">
+            <div class="modal_content">
+              <div class="modal_header">
+                <h3 class="modal_title" id="modal_title">Название</h3>
+              </div>
+              <div class="modal_body">
+                <div style="margin-bottom: 6%;" id="modal_body_text">
+                  Содержимое модального окна...
+                </div>
+                <button class="w-100 btn btn-primary btn-lg" id="close_modal" type="submit">Готово</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/file_entry_script.js"></script>
+    </div>
+    </div>
+</body>
+</html>
