@@ -35,3 +35,4 @@ Dmitriy Smirnov - https://t.me/emphaticBaby
 ## Stack
 - Library eel - a tool for creating web interfaces using Python. It provides integration between Python code and the web interface, allowing you to create full-fledged desktop applications using web technologies.
 - HTML, CSS, JS
+- Library docxtpl - a tool for creating and processing Microsoft Word documents using templates.
