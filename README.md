@@ -1,7 +1,7 @@
 # Report Automation Application
 The Report Automation Application is a powerful tool that automates the process of creating reports, saving time and reducing errors. It provides a user-friendly interface and a range of features to streamline the report generation process.
 
-##Features
+## Features
 
 - **Interface**: Data is collected using a nice interface consisting of html forms.
 - **Dynamic Data**: Insert dynamic content into reports using placeholders.
