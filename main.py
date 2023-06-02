@@ -10,6 +10,10 @@ CONFIG_FILE_PATH = os.path.normpath('path_to_save.txt')
 
 @eel.expose
 def fill_document(context: dict):
+    """
+    Функция заполнения шаблона данными.
+    :param context: данные для заполнения.
+    """
     doc_template = get_document_version(context)
     doc = DocxTemplate(os.path.normpath(doc_template))
 
@@ -37,6 +41,11 @@ def fill_document(context: dict):
 
 
 def get_document_version(context: dict) -> str:
+    """
+    Функция получения версии шаблона в зависимости от поступающих данных.
+    :param context: данные.
+    :return: путь к шаблону.
+    """
     if len(context.keys()) == 7:
         return 'document_templates/first.docx'
 
@@ -45,6 +54,11 @@ def get_document_version(context: dict) -> str:
 
 
 def load_main_page() -> str:
+    """
+    Функция выбора главной страницы. Если путь к директории сохранения отчетов не указан, то главной странице будет
+    страница регистрации.
+    :return: название главной страницы.
+    """
     if os.stat(CONFIG_FILE_PATH).st_size:
         return 'first_page.html'
     
@@ -52,6 +66,11 @@ def load_main_page() -> str:
 
 
 def get_ending(number: str) -> str:
+    """
+    Функция получения правильного окончания.
+    :param number: возраст.
+    :return: окончание.
+    """
     last_number = int(number[-1])
     if last_number == 1:
         return 'год'
@@ -63,11 +82,19 @@ def get_ending(number: str) -> str:
 
 @eel.expose
 def registrate_path_to_save(path: str):
+    """
+    Функция регистрации пути к директории для сохранения отчетов.
+    :param path: путь к директории.
+    """
     with open(CONFIG_FILE_PATH, "w", encoding='utf8') as f:
         f.write(path.replace('\"', ""))
     
 
 def get_path_to_save():
+    """
+    Функция получения пути к директории для сохранения отчетов из файла.
+    :return: путь к директории.
+    """
     with open(CONFIG_FILE_PATH, "r", encoding='utf8') as f:
         return f.read()
     
